@@ -1,14 +1,18 @@
-<h1>Restaurants#index</h1>
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <li>
-      <%= restaurant.name  %>
-      <%= restaurant.category %>
-      <%= restaurant.address %>
-      <%= restaurant.phone_number %>
-      <%= link_to "More details", restaurant_path(restaurant) %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <% @restaurants.each do |restaurant| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://tallypress.com/wp-content/uploads/2017/10/fried-chicken.jpg');">
+          <div class="card-category">Restaurant</div>
+          <div class="card-description">
+            <h2><%= restaurant.name  %></h2>
+            <p><%= restaurant.category %></p>
+          </div>
+          <img class="card-user" src="http://cdn.mos.cms.futurecdn.net/P2rXxQAfbWFEurbjXgaCah.jpg">
+          <%= link_to "More details", restaurant_path(restaurant), class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-<%= link_to "Add a new restaurant", new_restaurant_path %>

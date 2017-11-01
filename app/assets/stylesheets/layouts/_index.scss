@@ -3,3 +3,30 @@
 // @import "dashboard";
 // @import "profile";
 // @import "map";
+
+body {
+  margin: 0;
+}
+
+a {
+  color: #da552f;
+  transition: 0.8s ease;
+  font-weight: bold;
+  &:hover {
+  text-decoration: none;
+  color: gold;
+  }
+}
+
+.container {
+  padding-top: 50px;
+}
+
+.banner {
+  background-image: url("https://images.unsplash.com/photo-1455459182396-ae46100617cb?auto=format&fit=crop&w=2560&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size: cover;
+  height: 100vh;
+  .container {
+    color: white;
+    }
+}
