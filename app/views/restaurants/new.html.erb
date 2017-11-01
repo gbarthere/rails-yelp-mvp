@@ -1,0 +1,12 @@
+<%= simple_form_for [@restaurant] do |f| %>
+  <% if @restaurant.errors.any? %> 
+    <% @restaurant.errors.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+  <% end %>
+  <%= f.input :name %>
+  <%= f.input :category %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.submit "add restaurant", class: "btn btn-primary" %>
+<% end %>

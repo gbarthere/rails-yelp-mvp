@@ -1,0 +1,11 @@
+<%= simple_form_for [@restaurant, @review] do |f| %>
+<% if @review.errors.any? %> 
+    <% @review.errors.full_messages.each do |error| %>
+      <%= error %>
+    <% end %>
+  <% end %>
+  <%= f.input :rating %>
+  <%= f.input :content %>
+  <%= f.submit "add review", class: "btn btn-primary" %>
+<% end %>
+
